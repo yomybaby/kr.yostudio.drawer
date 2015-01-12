@@ -1,0 +1,33 @@
+".container":{
+	
+}
+
+"#listView" : {
+  	backgroundColor:'#ff3976',
+  	defaultItemTemplate: 'menuItem',
+	canScroll: false
+}
+
+".menuItem": {
+	height : 50,
+  	backgroundColor:'#ff3976'
+}
+
+".iconLabel": {
+	font: {
+		fontFamily: "Ionicons",
+		fontSize: 15
+	},
+	text: '\uf141',
+	color: 'white',
+	left: 10
+}
+
+".titleLabel": {
+	font: {
+		fontSize: 15
+	},
+	left: 28,
+	text: 'Menu 1',
+	color: 'white'
+}

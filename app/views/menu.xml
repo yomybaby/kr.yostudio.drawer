@@ -1,0 +1,16 @@
+<Alloy>
+    <View class="container">
+        <ListView id="listView">
+            <Templates>
+                <ItemTemplate name="menuItem" class="menuItem">
+                    <Label bindId="iconLabel" class="iconLabel"></Label>
+                    <Label bindId="titleLabel" class="titleLabel"></Label>
+                </ItemTemplate>
+            </Templates>
+            <ListSection>
+                <ListItem iconLabel:text="\uf3c6" titleLabel:text="Smile" itemId="smile"></ListItem>
+                <ListItem iconLabel:text="\uf4d7" titleLabel:text="Don't cry" itemId="cry"></ListItem>
+            </ListSection>
+        </ListView>
+    </View>
+</Alloy>

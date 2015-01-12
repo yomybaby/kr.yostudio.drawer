@@ -1,0 +1,11 @@
+
+".container" : {
+  backgroundColor: '#efefef'
+}
+
+".ion" : {
+	font : {
+		fontSize : 100
+	},
+	color : '#f39c02'
+}

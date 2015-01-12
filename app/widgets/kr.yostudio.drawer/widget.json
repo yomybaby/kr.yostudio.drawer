@@ -1,0 +1,13 @@
+{
+	"id": "kr.yostudio.drawer",
+	"name": "kr.yostudio.drawer",
+	"description" : "",
+	"author": "Jong Eun Lee (@yomybaby)",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2015",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"",
+	"platforms":"android,ios"
+}

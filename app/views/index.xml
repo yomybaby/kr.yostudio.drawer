@@ -1,0 +1,29 @@
+<Alloy>
+	<DrawerLayout module="yo.ui"
+	onDraweropen="onDrawerOpen"
+	onDrawerclose="onDrawerClose"
+	>
+		<View class="menuWrap" role="leftView">
+			<Require id="menuC" src="menu">
+			</Require>
+		</View>
+		<Window platform="ios" role="centerWindow" title="yo.drawer widget">
+			<LeftNavButton>
+				<View>
+					<Button  class="ion-android-menu menuBtn" onClick="onMenuButtonClick"/>
+				</View>
+			</LeftNavButton>
+			<Require src="main" id="mainC">
+			</Require>
+		</Window>
+		<Window platform="android" role="centerWindow">
+		    <ActionBar onHomeIconItemSelected="onMenuButtonClick" title="yo.drawer widget" ></ActionBar>
+			<Menu>
+				<MenuItem id="item1" title="Settings"/>
+				<MenuItem id="item2" title="Search"/>
+			</Menu>
+			<Require src="main" id="mainC">
+			</Require>
+		</Window>
+	</DrawerLayout>
+</Alloy>

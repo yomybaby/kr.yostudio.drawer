@@ -1,0 +1,5 @@
+<Alloy>
+	<Window class="container">
+	    <Label class="ion-sad-outline"></Label>
+	</Window>
+</Alloy>
