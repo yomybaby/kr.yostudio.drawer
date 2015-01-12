@@ -9,7 +9,7 @@ Android에서는 com.tripvi.drawerlayout 모듈을 사용했으며 iOS에서는 
 이 모듈은 [fokke의 drawer](https://github.com/FokkeZB/nl.fokkezb.drawer)영향을 많이 받았습니다. fokke의 drawer와의 차이점은 Android 스타일의 drawer라는 점입니다. 아래 캡쳐 이미지를 참고하세요.
 
 ios | androd
--- | --
+--- | ------
 ![ios ScreenShoot](screenshot_ios.gif) | ![android ScreenShoot](screenshot_android.gif)
 
 ## 사용법
