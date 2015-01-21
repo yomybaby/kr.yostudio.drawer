@@ -10,12 +10,12 @@ ios | androd
 
 ## Usage
 1. Install the [Ti.DrawerLayout](https://github.com/manumaticx/Ti.DrawerLayout)
-Unfortunaltly, latest version of Ti.DrawerLayout not avaliable on gitt.io. Because original version of this module was stopped to maintain. You can download [@manumaticx version](https://github.com/manumaticx/Ti.DrawerLayout/tree/master/dist).
+Unfortunately, latest version of Ti.DrawerLayout not avaliable on gitt.io. Because original version of this module was stopped to maintain. You can download [@manumaticx version](https://github.com/manumaticx/Ti.DrawerLayout/tree/master/dist).
 1. Install this widget via gitTio:
 ```
 gittio install kr.yostudio.drawer
 ```
-1. In your xml, use like bleow code. You have to set one `leftView` and one `centerWindow`
+1. In your xml, use like below code. You have to set one `leftView` and one `centerWindow`
 
 #### xml
 ```xml
@@ -80,12 +80,12 @@ $.menuC.on('menuclick',function(e){
 $.index.open();
 ```
 ## Method 
-name | description
+Name | Description
 ---- | -----------
-toggleLeftWindow | toggle lfet drawer open status
+toggleLeftWindow | Toggle left drawer open status
 
 ## Event
-name | description
+Name | Description
 ---- | -----------
 draweropen | Fired after drawer opened
 drawerclose | Fired after drawer closed
@@ -93,4 +93,7 @@ drawerslide | Fired while drawer is sliding
 
 ## To do
 This is a very first version. Welcome to any suggest and any PR.
-- add change centerView method as widget method.
+- Add changeCenterView method as a widget method.
+
+## License
+MIT
