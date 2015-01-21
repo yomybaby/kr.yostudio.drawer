@@ -1,5 +1,7 @@
 <Alloy>
-	<Widget src="kr.yostudio.drawer" onDraweropen="onDrawerOpen" onDrawerclose="onDrawerClose">
+	<Widget src="kr.yostudio.drawer" 
+	    onDraweropen="onDrawerOpen" 
+	    onDrawerclose="onDrawerClose">
 		<View class="menuWrap" role="leftView">
 			<Require id="menuC" src="menu">
 			</Require>

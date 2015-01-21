@@ -30,12 +30,6 @@ var DrawerLayout = function(args){
     });
     
     if(OS_IOS) this.topWindow.add(this.drawer.getView());
-        
-    Object.defineProperty(this, 'isLeftDrawerOpen', {
-        get: function(){
-            return this.drawer.isLeftDrawerOpen;
-        }
-    });
 };
 
 DrawerLayout.prototype.add = function(view){
@@ -82,7 +76,7 @@ DrawerLayout.prototype.add = function(view){
         }
     }
 };
-
+ 
 DrawerLayout.prototype.addEventListener = (function(){
     var drawerEvents = ['draweropen', 'drawerclose', 'drawerslide'];
     var windowEvents = ['open','close','focus'];
@@ -156,6 +150,9 @@ DrawerLayout.prototype.closeWindow = function(window, options) {
     return window.close(options);
 };
 
+DrawerLayout.prototype.toggleLeftView = function(args){
+    this.drawer.toggleLeftWindow(args);
+};
 
 // exports.createDrawerLayout = function(args){
     // return  new DrawerLayout();
@@ -328,4 +325,10 @@ if(args.children){
     });
 }
 _.extend(this, drawerLayout);
+$.on = drawerLayout.addEventListener;
+Object.defineProperty($, 'isLeftDrawerOpen', {
+    get: function(){
+        return drawerLayout.drawer.isLeftDrawerOpen;
+    }
+});
 

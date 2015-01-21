@@ -1,8 +1,8 @@
 ## DrawerLayout
-This is a Alloy drawer widget for **Android drawerLayout style**.
-I got a lot of ideas and hints from [@FokkeZB's drawer](https://github.com/FokkeZB/nl.fokkezb.drawer). Thanks  @FokkeZB. :)
-On Android, this works as a wrapper of [Ti.DrawerLayout](https://github.com/manumaticx/Ti.DrawerLayout) Android module. Thanks @Tripvi and @manumaticx.
-On iOS, this works on pure Ti js api using Ti.UI.ScrollableView.
+This is a Alloy drawer widget for **Android drawerLayout style**.  
+I got a lot of ideas and hints from [@FokkeZB's drawer](https://github.com/FokkeZB/nl.fokkezb.drawer). Thanks  @FokkeZB. :)  
+On Android, this works as a wrapper of [Ti.DrawerLayout](https://github.com/manumaticx/Ti.DrawerLayout) Android module. Thanks @Tripvi and @manumaticx.  
+On iOS, this works using pure Titanium API.
 
 ios | androd
 --- | ------
@@ -52,7 +52,7 @@ gittio install kr.yostudio.drawer
 #### js
 ```javascript
 function onMenuButtonClick(e){
-    $.index.drawer.toggleLeftWindow();
+    $.index.toggleLeftView();
 }
 
 function onDrawerOpen(e) {
@@ -69,7 +69,7 @@ function onDrawerSlide(e) {
 }
 
 $.menuC.on('menuclick',function(e){
-    $.index.drawer.toggleLeftWindow({animated:false}); //animated option only work on ios
+    $.index.toggleLeftView({animated:false}); //animated option only work on ios
     if(e.itemId == 'smile'){
         $.index.openWindow(Alloy.createController('smile').getView());
     }else{
@@ -82,18 +82,20 @@ $.index.open();
 ## Method 
 Name | Description
 ---- | -----------
-toggleLeftWindow | Toggle left drawer open status
+toggleLeftView | Toggle left drawer open status
+openWindow | openWindow on Navigation window (On Android, just open new window)
 
 ## Event
 Name | Description
 ---- | -----------
 draweropen | Fired after drawer opened
 drawerclose | Fired after drawer closed
-drawerslide | Fired while drawer is sliding
+~~drawerslide~~ | ~~Fired while drawer is sliding~~
 
 ## To do
 This is a very first version. Welcome to any suggest and any PR.
 - Add changeCenterView method as a widget method.
+- Add `drawerslide` event
 
 ## License
 MIT
