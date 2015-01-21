@@ -8,6 +8,9 @@ ios | androd
 --- | ------
 ![ios ScreenShoot](screenshot_ios.gif) | ![android ScreenShoot](screenshot_android.gif)
 
+## Why use this?
+I want to make it simple and use `leftNavButton`, `rightNavButton`, `Menu`, `ActionBar` on xml directly even using drawer.
+
 ## Usage
 1. Install the [Ti.DrawerLayout](https://github.com/manumaticx/Ti.DrawerLayout)
 Unfortunately, latest version of Ti.DrawerLayout not avaliable on gitt.io. Because original version of this module was stopped to maintain. You can download [@manumaticx version](https://github.com/manumaticx/Ti.DrawerLayout/tree/master/dist).
