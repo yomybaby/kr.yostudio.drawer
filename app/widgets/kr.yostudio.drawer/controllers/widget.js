@@ -38,8 +38,6 @@ var DrawerLayout = function(args){
     });
 };
 
-
-
 DrawerLayout.prototype.add = function(view){
     if(view.role=='leftView'){
         //leftDrawer를 만들고 view를 leftDrawer에 추가
@@ -85,22 +83,20 @@ DrawerLayout.prototype.add = function(view){
     }
 };
 
-var drawerEvents = ['draweropen', 'drawerclose', 'drawerslide'];
-var windowEvents = ['open','close','focus'];
-DrawerLayout.prototype.addEventListener = function(eventName,callback){
-    
-    if(_.contains(windowEvents,eventName)){
-        this.topWindow.addEventListener(eventName,callback);
-    }else{
-        this.drawer.addEventListener(eventName,callback);
-    }
-};
-
+DrawerLayout.prototype.addEventListener = (function(){
+    var drawerEvents = ['draweropen', 'drawerclose', 'drawerslide'];
+    var windowEvents = ['open','close','focus'];
+    return function(eventName,callback){
+        if(_.contains(windowEvents,eventName)){
+            this.topWindow.addEventListener(eventName,callback);
+        }else{
+            this.drawer.addEventListener(eventName,callback);
+        }
+   };
+})();
 
 DrawerLayout.prototype.open = function(args){
-    //만약 centerWidnow와 leftView가 지정되지 않았으면 ERROR 로그 출력
     args = args || {};
-    
     if(OS_ANDROID){
         // args.activityExitAnimation = Ti.Android.R.anim.slide_out_right;
     }
@@ -322,15 +318,14 @@ if(OS_IOS){
 }
 
 var drawerLayout = new DrawerLayout();
+
+args.children && drawerLayout.add(args.children);
 console.log(args);
 if(args.children){
+    //만약 centerWidnow와 leftView가 지정되지 않았으면 ERROR 로그 출력
     _.each(args.children,function(child){
-        // $[child.]
         drawerLayout.add(child);
     });
 }
-
 _.extend(this, drawerLayout);
-// exports.open = function(){
-    // drawerLayout.open();
-// }
+
