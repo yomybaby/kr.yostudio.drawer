@@ -1,8 +1,5 @@
 <Alloy>
-	<DrawerLayout module="yo.ui"
-	onDraweropen="onDrawerOpen"
-	onDrawerclose="onDrawerClose"
-	>
+	<Widget src="kr.yostudio.drawer" onDraweropen="onDrawerOpen" onDrawerclose="onDrawerClose">
 		<View class="menuWrap" role="leftView">
 			<Require id="menuC" src="menu">
 			</Require>
@@ -25,5 +22,5 @@
 			<Require src="main" id="mainC">
 			</Require>
 		</Window>
-	</DrawerLayout>
+	</Widget>
 </Alloy>
