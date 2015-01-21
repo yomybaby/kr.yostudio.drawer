@@ -5,7 +5,7 @@ On Android, this works as a wrapper of [Ti.DrawerLayout](https://github.com/manu
 On iOS, this works on pure Ti js api using Ti.UI.ScrollableView.
 
 ios | androd
--- | --
+--- | ------
 ![ios ScreenShoot](screenshot_ios.gif) | ![android ScreenShoot](screenshot_android.gif)
 
 ## Usage
