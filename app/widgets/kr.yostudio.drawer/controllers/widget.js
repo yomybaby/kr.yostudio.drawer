@@ -211,6 +211,7 @@ if(OS_IOS){
             touchEnabled : false
         });
         this._view.contentView = Ti.UI.createView({
+            clipMode : Titanium.UI.iOS.CLIP_MODE_DISABLED,
             backgroundColor : 'transparent',
             left:0
         });
