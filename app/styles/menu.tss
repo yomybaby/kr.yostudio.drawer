@@ -10,8 +10,7 @@
 
 ".menuItem": {
 	height : 50,
-  	backgroundColor:'#ff3976',
-  	selectionStyle: Titanium.UI.iPhone.ListViewCellSelectionStyle.NONE
+  	backgroundColor:'#ff3976'
 }
 
 ".iconLabel": {

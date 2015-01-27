@@ -61,6 +61,11 @@ DrawerLayout.prototype.add = function(view){
                 backgroundColor : 'gray'
             });
             
+            var children = view.children;
+            view.removeAllChildren();
+            _.each(children,function(child){
+                centerWrap.add(child);
+            });
             this.drawer.setCenterView(centerWrap);
             this.topWindow = view;
             this.topWindow.add(this.drawer);
