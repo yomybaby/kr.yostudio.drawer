@@ -299,7 +299,7 @@ if(OS_IOS){
                     left : SIZE.leftViewWidth * -1,
                 });
                 view.applyProperties({
-                    backgroundColor : 'transparent',
+                   // backgroundColor : 'transparent',
                     width : SIZE.leftViewWidth,
                     left : SIZE.leftViewWidth,
                     right : null
