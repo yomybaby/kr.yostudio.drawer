@@ -16,7 +16,7 @@
 			</Require>
 		</Window>
 		<Window platform="android" role="centerWindow">
-		    <ActionBar onHomeIconItemSelected="onMenuButtonClick" title="yo.drawer widget" ></ActionBar>
+		  <ActionBar onHomeIconItemSelected="onMenuButtonClick" title="yo.drawer widget" ></ActionBar>
 			<Menu>
 				<MenuItem id="item1" title="Settings"/>
 				<MenuItem id="item2" title="Search"/>

@@ -10,17 +10,18 @@ function onDrawerClose(e) {
     Ti.API.info($.index.isLeftDrawerOpen);
 }
 
-// function onDrawerSlide(e) { //not supported yet.
-    // slide offset: e.offset 
-    // console.log(e);
-// }
-
 $.menuC.on('menuclick',function(e){
     $.index.toggleLeftView({animated:false}); //animated option only work on ios
-    if(e.itemId == 'smile'){
-        $.index.openWindow(Alloy.createController('smile').getView());
-    }else{
-        $.index.openWindow(Alloy.createController('cry').getView());
+    
+    switch(e.itemId){
+      case 'smile':
+      case 'cry':
+        $.index.openWindow(Alloy.createController(e.itemId).getView());
+      break;
+      
+      default:
+        $.index.setCenterView(Alloy.createController(e.itemId).getView()); //Arg shold be View(not window)
+      break;
     }
 });
 

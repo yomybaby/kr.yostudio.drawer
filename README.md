@@ -66,17 +66,18 @@ function onDrawerClose(e) {
     Ti.API.info($.index.isLeftDrawerOpen);
 }
 
-function onDrawerSlide(e) {
-    // slide offset: e.offset
-    console.log(e);
-}
-
 $.menuC.on('menuclick',function(e){
     $.index.toggleLeftView({animated:false}); //animated option only work on ios
-    if(e.itemId == 'smile'){
-        $.index.openWindow(Alloy.createController('smile').getView());
-    }else{
-        $.index.openWindow(Alloy.createController('cry').getView());
+    
+    switch(e.itemId){
+      case 'smile':
+      case 'cry':
+        $.index.openWindow(Alloy.createController(e.itemId).getView());
+      break;
+      
+      default:
+        $.index.setCenterView(Alloy.createController(e.itemId).getView()); //Arg shold be View(not window)
+      break;
     }
 });
 
@@ -87,6 +88,7 @@ Name | Description
 ---- | -----------
 toggleLeftView | Toggle left drawer open status
 openWindow | openWindow on Navigation window (On Android, just open new window)
+setCenterView | change centerView
 
 ## Event
 Name | Description
@@ -97,7 +99,7 @@ drawerclose | Fired after drawer closed
 
 ## To do
 This is a very first version. Welcome to any suggest and any PR.
-- Add changeCenterView method as a widget method.
+- ~~Add changeCenterView method as a widget method.~~ resolve #2
 - Add `drawerslide` event
 
 ## License

@@ -1,0 +1,5 @@
+<Alloy>
+	<View class="container">
+	      <Label class="ion-pizza ion"></Label>
+	</View>
+</Alloy>

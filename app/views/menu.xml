@@ -7,9 +7,13 @@
                     <Label bindId="titleLabel" class="titleLabel"></Label>
                 </ItemTemplate>
             </Templates>
-            <ListSection>
-                <ListItem iconLabel:text="\uf3c6" titleLabel:text="Smile" itemId="smile"></ListItem>
-                <ListItem iconLabel:text="\uf4d7" titleLabel:text="Don't cry" itemId="cry"></ListItem>
+            <ListSection headerTitle="Open New Window">
+              <ListItem iconLabel:text="\uf3c6" titleLabel:text="Smile" itemId="smile"></ListItem>
+              <ListItem iconLabel:text="\uf4d7" titleLabel:text="Don't cry" itemId="cry"></ListItem>
+            </ListSection>
+            <ListSection headerTitle="Change centerView">
+              <ListItem iconLabel:text="\uf2a8" titleLabel:text="Pizza View" itemId="pizza"></ListItem>
+              <ListItem iconLabel:text="\uf27d" titleLabel:text="Icecream View" itemId="icecream"></ListItem>
             </ListSection>
         </ListView>
     </View>

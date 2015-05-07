@@ -81,6 +81,15 @@ DrawerLayout.prototype.add = function(view){
         }
     }
 };
+
+DrawerLayout.prototype.setCenterView = function(view){
+  if(OS_ANDROID){
+    this.drawer.setCenterView(view);
+  }else{
+    this.topWindow.window.removeAllChildren();
+    this.topWindow.window.add(view);
+  }
+}
  
 DrawerLayout.prototype.addEventListener = (function(){
     var drawerEvents = ['draweropen', 'drawerclose', 'drawerslide'];
@@ -337,4 +346,3 @@ Object.defineProperty($, 'isLeftDrawerOpen', {
         return drawerLayout.drawer.isLeftDrawerOpen;
     }
 });
-

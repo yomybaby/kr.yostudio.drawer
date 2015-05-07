@@ -5,7 +5,7 @@
     <version>1.0</version>
     <publisher>yomybaby</publisher>
     <url>http://</url>
-    <description/>
+    <description>undefined</description>
     <copyright>2015 by yomybaby</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
@@ -57,7 +57,7 @@
         <target device="iphone">true</target>
         <target device="mobileweb">false</target>
     </deployment-targets>
-    <sdk-version>3.5.0.GA</sdk-version>
+    <sdk-version>4.0.0.RC2</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>
