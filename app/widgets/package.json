@@ -1,0 +1,14 @@
+{
+  "version": "1.0.3",
+  "description": "DrawerLayout, Titanium Alloy widget. (Android: com.tripvi.drawerlayout, iOS: using ScrollableView)",
+  "author": "Jong Eun Lee",
+  "license": "Public Domain",
+  "name": "kr.yostudio.drawer",
+  "keywords": [
+    "drawer",
+    "drawerlayout",
+    "menu",
+    "side",
+    "alloy-widget"
+  ]
+}
