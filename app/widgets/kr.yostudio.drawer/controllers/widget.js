@@ -20,8 +20,10 @@ var DrawerLayout = function(args){
     var self = this;
     this.topWindow = (OS_IOS)? Ti.UI.iOS.createNavigationWindow():null;
     
+    SIZE.leftViewWidth = SIZE.leftViewWidth || args.leftViewWidth;
+
     this.drawer = (OS_IOS)?new LeftDrawer(args):require('com.tripvi.drawerlayout').createDrawer({
-        leftDrawerWidth : 200,
+        leftDrawerWidth : SIZE.leftViewWidth,
         centerView : Ti.UI.createView({
             backgroundColor : "transparent"
         }),
@@ -39,7 +41,10 @@ DrawerLayout.prototype.add = function(view){
             this.drawer.setLeftView(view);
         }
         if(OS_ANDROID){
-            // this.leftView = view;
+            if(_.isNumber(view.width) && view.width>0){
+              SIZE.leftViewWidth = view.width;
+              this.drawer.leftDrawerWidth = SIZE.leftViewWidth;
+            }
             this.drawer.setLeftView(view);
         }
         
