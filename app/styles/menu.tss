@@ -4,8 +4,7 @@
 
 "#listView" : {
   	backgroundColor:'#ff3976',
-  	defaultItemTemplate: 'menuItem',
-	canScroll: false
+  	defaultItemTemplate: 'menuItem'
 }
 
 ".menuItem": {
