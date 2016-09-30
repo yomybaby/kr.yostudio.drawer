@@ -48,8 +48,9 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="android">com.tripvi.drawerlayout</module>
-    </modules>
+    <module platform="android">com.tripvi.drawerlayout</module>
+    <!-- <module platform="android">com.alcoapps.actionbarextras</module> -->
+  </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="blackberry">false</target>
