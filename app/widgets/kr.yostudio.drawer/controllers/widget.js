@@ -326,8 +326,13 @@ if(OS_IOS){
                     this._view.contentView,
                     this._view.blankView
                 ];
-                this._view.scrollView.currentPage = 1;
-                this._view.scrollView.hitRect = SIZE.defaultHitRect;
+                var that = this;
+                
+                //https://github.com/yomybaby/kr.yostudio.drawer/issues/16
+                setTimeout(function () {
+                  that._view.scrollView.currentPage = 1;
+                  that._view.scrollView.hitRect = SIZE.defaultHitRect;
+                }, 0);
             };
         })()
     });
