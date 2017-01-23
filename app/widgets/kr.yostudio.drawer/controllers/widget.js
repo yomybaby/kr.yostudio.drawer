@@ -342,7 +342,6 @@ if(OS_IOS){
 var drawerLayout = new DrawerLayout();
 
 args.children && drawerLayout.add(args.children);
-console.log(args);
 if(args.children){
     //만약 centerWidnow와 leftView가 지정되지 않았으면 ERROR 로그 출력
     _.each(args.children,function(child){
